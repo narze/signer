@@ -400,8 +400,8 @@ class Signer
       return
     end
 
-    transforms_node.add_child(transform_node(canonicalize_id, options))
     transforms_node.add_child(transform_node('http://www.w3.org/2000/09/xmldsig#enveloped-signature', options)) if options[:enveloped]
+    transforms_node.add_child(transform_node(canonicalize_id, options))
   end
 
   # Check are we using ws security?
